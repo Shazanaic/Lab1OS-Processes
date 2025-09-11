@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <fstream>
 #include <vector>
+#include <cstdlib>
 
 using namespace std;
 
@@ -13,7 +14,7 @@ struct employee {
 int main(int argc, char* argv[]) {
 	ifstream binfile(argv[1], ios::binary);
 	ofstream report(argv[2]);
-	float pph = atof(argv[3]);
+	double pph = atof(argv[3]);
 
 	vector<employee> empl;
 	employee temp;
