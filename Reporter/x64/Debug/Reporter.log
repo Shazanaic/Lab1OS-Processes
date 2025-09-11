@@ -1,0 +1,3 @@
+﻿  Reporter.cpp
+F:\Projects\Lab1OS\Reporter\Reporter.cpp(30,26): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  Reporter.vcxproj -> F:\Projects\Lab1OS\Reporter\x64\Debug\Reporter.exe
