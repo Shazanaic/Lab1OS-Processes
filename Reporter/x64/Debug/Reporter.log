@@ -1,3 +1,2 @@
-﻿  Reporter.cpp
-F:\Projects\Lab1OS\Reporter\Reporter.cpp(30,26): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-  Reporter.vcxproj -> F:\Projects\Lab1OS\Reporter\x64\Debug\Reporter.exe
+﻿  LINK : не найден или не выполнена сборка F:\Projects\Lab1OS\x64\Debug\Reporter.exe при последней инкрементной компоновке; выполняется полная компоновка
+  Reporter.vcxproj -> F:\Projects\Lab1OS\x64\Debug\Reporter.exe

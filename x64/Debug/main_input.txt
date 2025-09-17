@@ -1,0 +1,5 @@
+empl.bin
+1
+1 Ivan 10
+15
+report.txt

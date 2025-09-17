@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>F:\Projects\Lab1OS\Creator\x64\Debug\Creator.exe</FullPath>
+      <FullPath>F:\Projects\Lab1OS\x64\Debug\Creator.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
