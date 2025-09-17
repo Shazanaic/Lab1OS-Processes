@@ -1,5 +1,0 @@
-empl.bin
-1
-1 Ivan 10
--100
-report.txt

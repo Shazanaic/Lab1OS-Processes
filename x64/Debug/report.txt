@@ -1,3 +1,0 @@
-Report on file empl.bin: 
-Number of employee, name, hours of work, salary 
-1 Roflik 15 225
