@@ -1,34 +1,43 @@
 ﻿#include <fstream>
 #include <iostream>
+#include <vector>
+#include "Employee.h"
 
 using namespace std;
 
-struct employee {
-	int num;
-	char name[10];
-	double hours;
-};
-
 int main(int argc, char* argv[]) {
-	ofstream binfile(argv[1], ios::binary | ios::out);
+    if (argc < 3) {
+        cerr << "Usage: Creator <output_file> <number_of_records>" << endl;
+        return 1;
+    }
 
-	if (!binfile) {
-		cout << "Error occured: file opening/creating is failed.";
-		return 1;
-	}
+    ofstream binfile(argv[1], ios::binary | ios::out);
+    if (!binfile) {
+        cerr << "Error: cannot open/create file " << argv[1] << endl;
+        return 1;
+    }
 
-	int records = atoi(argv[2]);
-	employee* empl_list = new employee[records];
+    int records = atoi(argv[2]);
+    if (records <= 0) {
+        cerr << "Error: number of records must be positive" << endl;
+        return 1;
+    }
 
-	cout << "Fill out the list of employees (number, name, hours): " << endl;
-	for (int i = 0; i < records; i++) {
-		cout << i + 1 << ". ";
-		cin >> empl_list[i].num >> empl_list[i].name >> empl_list[i].hours;
-	}
+    vector<Employee> empl_list;
+    empl_list.reserve(records);
 
-	for (int i = 0; i < records; i++)
-		binfile.write(reinterpret_cast<char*>(&empl_list[i]), sizeof(empl_list[i]));
+    cout << "Fill out the list of employees (number, name, hours): " << endl;
+    for (int i = 0; i < records; i++) {
+        cout << i + 1 << ". ";
+        Employee e;
+        cin >> e;
+        empl_list.push_back(e);
+    }
 
-	binfile.close();
-	return 0;
+    for (const auto& e : empl_list) {
+        e.writeBinary(binfile);
+    }
+
+    binfile.close();
+    return 0;
 }
